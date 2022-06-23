@@ -23,6 +23,7 @@ namespace POSProject
         public MainWindow()
         {
             InitializeComponent();
+            Console.WriteLine("Hello world!");
         }
     }
 }
