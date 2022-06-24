@@ -22,8 +22,14 @@ namespace POSProject
     {
         public MainWindow()
         {
+            db();
             InitializeComponent();
-            Console.WriteLine("Hello world!");
+        }
+
+        public void db()
+        {
+            using var dbContext = new SQLiteContext();
+            dbContext.Database.EnsureCreated();
         }
     }
 }
