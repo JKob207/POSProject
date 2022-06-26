@@ -114,9 +114,9 @@
             <StackPanel>
                 <StackPanel Orientation="Horizontal"
                             Margin="0,0,0,20">
-                    <Image  Width="50" Height="50"
-                            Source="/Logo.png"
-                            RenderOptions.BitmapScalingMode="Fant"/>
+                    <Image   
+                        Width="50" Height="50"
+                            RenderOptions.BitmapScalingMode="Fant" Source="/Logo.png"/>
 
 
 
