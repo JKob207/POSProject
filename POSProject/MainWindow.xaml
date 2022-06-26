@@ -6,10 +6,13 @@
          xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:POSProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="500" Width="900"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="#444">
+        Background="#444"
+        FontFamily="Fonts/#Rubik"
+        >
+
 
 
     <Grid>
@@ -25,7 +28,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Program Bar-->
-        <Grid Background="#0F0F2D" Grid.ColumnSpan="2" >
+        <Grid Background="#0F0F0f" Grid.ColumnSpan="2" MouseDown="Grid_MouseDown">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -63,29 +66,168 @@
             <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=HH:MM}"
                Foreground="#db5000"
                Grid.Column="3"
-               VerticalAlignment="Center"
+               VerticalAlignment="Top"
                HorizontalAlignment="Center"
-               FontWeight="Light"
+               FontWeight="Light" Margin="0,5,0,0"
               />
+
+            <Button Content=" Zaloguj"
+                        Foreground="White"
+                        FontSize="10"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                    Grid.Column="8">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Rubik"/>
+                        <Setter Property="Background" Value="#db5000"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#c24802"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="75" Height="15"
+                                    CornerRadius="8"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
 
         </Grid>
 
         <!--Console Panel-->
         <!--First Column-->
-        <StackPanel Grid.Row="1">
-            <StackPanel Orientation="Horizontal">
-                <Image Width="50" Height="50"/>
-                <TextBlock Text="James's CO"
+        <StackPanel Grid.Row="1" VerticalAlignment="Center"
+                    Margin="60">
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                    <Image  Width="50" Height="50"
+                            Source="/Logo.png"
+                            RenderOptions.BitmapScalingMode="Fant"/>
+
+
+
+
+                    <TextBlock Text="James's CO"
                                    Foreground="White"
                                    FontSize="20"
-                                   FontWeight="Heavy"
+                                   FontWeight="Medium"
                                    VerticalAlignment="Center"
-                                   />
-                <!--TO DO:
-                    Fonts, buttons, Graphisc, Some Logo-->
+                                   Margin="10,0,0,0"/>
 
+
+
+
+                    
+
+
+                </StackPanel>
+                <TextBlock Text="Zmień " 
+                       Foreground="White"
+                       FontSize="25"
+                       FontWeight="Medium"/>
+
+                <TextBlock Text="swoją restauracje" 
+                       Foreground="White"
+                       FontSize="25"
+                       FontWeight="Medium"
+                       />
+
+                <TextBlock Text="z nowym system POS" 
+                       Foreground="White"
+                       FontSize="25"
+                       FontWeight="Medium"/>
+
+                <TextBlock Text="Jeżeli chcesz aby twoja reustauracja wkroczyła w XXI wiek, odmień ją już dziś z nowym system POS (ang. point of sale). Twoja praca będzie łatwiejsza, unikszniesz niepotrzebnych strat a twój zespół oraz klienci docenią to. " 
+                       Foreground="White"
+                       FontSize="12"
+                       FontWeight="Medium"
+                       TextWrapping="Wrap"
+                           Margin="0,10,0,0"/>
 
             </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,15,0,0">
+                <Button Content=" Zaloguj"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Rubik"/>
+                            <Setter Property="Background" Value="#db5000"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#c24802"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+                <Button Content="Zarejestruj"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        >
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Rubik"/>
+                            <Setter Property="Background" Value="#666"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#555"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+            </StackPanel>
+
 
 
         </StackPanel>
@@ -97,9 +239,32 @@
 
         <!--Second Column-->
 
+        <Grid Grid.Column="1"
+              Grid.RowSpan="2"
+              Margin="160,-365,-610,85"
+              Panel.ZIndex="-1">
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50"/>
+            </Grid.RenderTransform>
 
+            <StackPanel Orientation="Horizontal"
+                        Margin="-350,250,-255,-250">
+                <StackPanel>
+                    <Border Width="700" Height="35" Background="#f37e17" CornerRadius="20" Margin="150,0,0,0"/>
+                    <Border Width="700" Height="35" Background="#979797" CornerRadius="20" Margin="0,15,0,0"/>
+                    <Border Width="700" Height="35" Background="#FFF" CornerRadius="20" Margin="75,15,0,0"/>
+                </StackPanel>
+                <StackPanel>
+                    <Border Width="700" Height="35" Background="#f37e17" CornerRadius="20" Margin="150,0,0,0"/>
+                    <Border Width="700" Height="35" Background="#979797" CornerRadius="20" Margin="0,15,0,0"/>
+                    <Border Width="700" Height="35" Background="#FFF" CornerRadius="20" Margin="75,15,0,0"/>
+                </StackPanel>
 
+            </StackPanel>
 
+        </Grid>
+
+<!--TO DO: fix time issue-->
 
     </Grid>
 </Window>

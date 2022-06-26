@@ -23,7 +23,18 @@ namespace POSProject
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine("Hello world!");
+            }
+
+
+        //Movement of Window
+        private void Grid_MouseDown(object sender , MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
+
+
     }
 }
