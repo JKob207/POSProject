@@ -35,6 +35,18 @@ namespace POSProject
             }
         }
 
+        private void Login1_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
 
+        private void btRegistration_Click(object sender, RoutedEventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Close();
+        }
     }
 }

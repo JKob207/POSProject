@@ -72,6 +72,8 @@
               />
 
             <Button Content=" Zaloguj"
+                    Name="Login2"
+                    Click="Login1_Click"
                         Foreground="White"
                         FontSize="10"
                         FontWeight="Medium"
@@ -163,6 +165,8 @@
             <StackPanel Orientation="Horizontal"
                         Margin="0,15,0,0">
                 <Button Content=" Zaloguj"
+                        Name="Login1"
+                        Click="Login1_Click"
                         Foreground="White"
                         FontSize="14"
                         FontWeight="Medium"
@@ -195,6 +199,8 @@
                 </Button>
 
                 <Button Content="Zarejestruj"
+                        Name="btRegistration"
+                        Click="btRegistration_Click"
                         Foreground="White"
                         FontSize="14"
                         FontWeight="Medium"
