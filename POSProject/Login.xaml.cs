@@ -23,5 +23,12 @@ namespace POSProject
         {
             InitializeComponent();
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow home = new MainWindow();
+            home.Show();
+            this.Close();
+        }
     }
 }

@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POSProject"
         mc:Ignorable="d"
-        Title="Register" Height="450" Width="800">
+        Title="Register"
+        Height="500" Width="900"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#444"
+        FontFamily="Fonts/#Rubik">
     <Grid>
         
     </Grid>
