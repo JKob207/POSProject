@@ -13,7 +13,9 @@ namespace POSProject
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public int Quantity { get; set; }
+        public int customerPizzaID { get; set; }
         public Customer_pizza customer_Pizza { get; set; }
+        public int ExtraID { get; set; }
         public Extra Extra { get; set; }
     }
 }

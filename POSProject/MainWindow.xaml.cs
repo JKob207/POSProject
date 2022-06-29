@@ -22,14 +22,41 @@ namespace POSProject
     {
         public MainWindow()
         {
-            db();
+            InitializeDatabase();
             InitializeComponent();
         }
 
-        public void db()
+        public void InitializeDatabase()
         {
             using var dbContext = new SQLiteContext();
             dbContext.Database.EnsureCreated();
+            InitializeTablesValue(dbContext);
+        }
+
+        private void InitializeTablesValue(SQLiteContext db)
+        {
+            //Pizzas
+            db.Pizza.Add(new() { Name = "Margherita", Price = 29 });
+            db.Pizza.Add(new() { Name = "Funghi", Price = 30 });
+            db.Pizza.Add(new() { Name = "Salami", Price = 32 });
+            db.Pizza.Add(new() { Name = "Capricciosa", Price = 32 });
+            db.Pizza.Add(new() { Name = "Hawajska", Price = 32 });
+            db.Pizza.Add(new() { Name = "Quarttro", Price = 34 });
+
+            //Extras
+            db.Extra.Add(new() { Name = "Chicken", Price = 5 });
+            db.Extra.Add(new() { Name = "Cheesee", Price = 2 });
+            db.Extra.Add(new() { Name = "Mushrooms", Price = 2 });
+            db.Extra.Add(new() { Name = "Spinaci", Price = 3 });
+            db.Extra.Add(new() { Name = "Salami", Price = 4 });
+
+            //Drinks
+            db.Drink.Add(new() { Name = "CocaCola", Price = 7 });
+            db.Drink.Add(new() { Name = "Fanta", Price = 7 });
+            db.Drink.Add(new() { Name = "Sprite", Price = 7 });
+            db.Drink.Add(new() { Name = "Water", Price = 5 });
+
+            db.SaveChanges();
         }
     }
 }
