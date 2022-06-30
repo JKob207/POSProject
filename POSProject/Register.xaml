@@ -5,13 +5,150 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POSProject"
         mc:Ignorable="d"
-        Title="Register"
-        Height="500" Width="900"
-        WindowStyle="None"
+        Title="Zarejestruj się"
+        Height="570" Width="900"
+        WindowStyle="SingleBorderWindow"
         ResizeMode="NoResize"
         Background="#444"
         FontFamily="Fonts/#Rubik">
     <Grid>
-        
+        <Border BorderBrush="Orange" BorderThickness="1"/>
+
+        <!--First Column-->
+        <Image Source="/Images/Reustaurant_logo.png"
+                       RenderOptions.BitmapScalingMode="Fant" 
+                       Margin="63,127,606,126"/>
+
+        <!--Second Column-->
+
+        <Label Content="Utwórz Konto" 
+               Foreground="White"
+               FontSize="20"
+               Margin="461,86,-461,-86"/>
+
+
+        <TextBlock Text="Wprowadź swój identyfikator" 
+                   Margin="294,141,121,330" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+        <TextBox FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="255"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Height="25"
+                 Margin="461,160,0,349"/>
+
+        <TextBlock Text="Imię" 
+                   Margin="231,202,184,268" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+        <TextBox FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="118"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Height="25"
+                 Margin="461,222,0,287"/>
+
+        <TextBlock Text="Nazwisko" 
+                   Margin="376,202,39,268" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+        <TextBox FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="118"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Height="25"
+                 Margin="595,222,0,287"/>
+
+        <TextBlock Text="Wiek" 
+                   Margin="231,265,184,205" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+
+
+        <TextBlock Text="Stanowisko:" 
+                   Margin="383,265,32,205" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+        <!--TO DO: FIND Solve how to make input type number and list-->
+
+        <Button Name="Back"
+                Click="Back_Click"
+            Foreground="White"
+                Background="Gray"
+                FontWeight="Bold"
+                FontSize="20"
+             Margin="399,416,121,10">
+            <Image Source="Images/Back_arrow.png"
+                   RenderOptions.BitmapScalingMode="Fant"
+                   />
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="60" Height="40"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="CreateAccount_Button"  
+                Content="Utwórz konto" 
+                Margin="461,415,-95,9"
+                Foreground="White"
+                Background="#FFF37E15"
+                FontWeight="Bold"
+                FontSize="20"
+                >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="200" Height="45"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+
+
+
     </Grid>
 </Window>
