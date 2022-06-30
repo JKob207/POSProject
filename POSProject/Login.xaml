@@ -1,0 +1,87 @@
+﻿<Window x:Class="POSProject.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POSProject"
+        mc:Ignorable="d"
+        Title="Zaloguj Się" Height="550" Width="600"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        Background="#444"
+        FontFamily="Fonts/#Rubik">
+    <Grid>
+
+        <Image x:Name="Company_logo" HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Source="Reustaurant_logo.png" Margin="0,10,0,0"
+               RenderOptions.BitmapScalingMode="Fant" />
+        <TextBlock Text="Zaloguj się"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   FontWeight="Medium"
+                                   VerticalAlignment="Top"
+                                   Margin="244,250,233,0"/>
+        <Border BorderBrush="Orange" BorderThickness="1"/>
+        <TextBlock Text="Wprowadź swój identyfikator" Margin="215,319,200,152" Background="Transparent" Foreground="#FFF37E15" FontSize="11" TextAlignment="Center"  />
+
+        <Border BorderBrush="White" BorderThickness="1" Margin="106,227,106,30">
+
+            <PasswordBox FontFamily="Fonts/Rubik"
+                             FontWeight="Light"
+                             
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Gray"
+                             BorderThickness="0"
+                             Width="236"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.7"
+                             Height="25"
+                             Margin="0,108,0,108"/>
+
+
+
+        </Border>
+        <Button x:Name="Run_Button"  
+                Content="Uruchom" 
+                Margin="183,371,182,72"
+                Foreground="White"
+                Background="#FFF37E15"
+                FontWeight="Bold"
+                FontSize="20"
+                >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="200" Height="45"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+        <Button Name="Back"
+                Click="Back_Click"
+            Foreground="White"
+                Background="#FFF37E15"
+                FontWeight="Bold"
+                FontSize="20"
+             Margin="510,10,10,452">
+            <Image
+                   RenderOptions.BitmapScalingMode="Fant" Source="/Back_Arrow.png"
+                   />
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="60" Height="40"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
