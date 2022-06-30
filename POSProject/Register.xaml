@@ -15,9 +15,9 @@
         <Border BorderBrush="Orange" BorderThickness="1"/>
 
         <!--First Column-->
-        <Image Source="/Images/Reustaurant_logo.png"
+        <Image
                        RenderOptions.BitmapScalingMode="Fant" 
-                       Margin="63,127,606,126"/>
+                       Margin="63,127,606,126" Source="/Reustaurant_logo.png"/>
 
         <!--Second Column-->
 
@@ -111,8 +111,8 @@
                 FontWeight="Bold"
                 FontSize="20"
              Margin="399,416,121,10">
-            <Image Source="Images/Back_arrow.png"
-                   RenderOptions.BitmapScalingMode="Fant"
+            <Image
+                   RenderOptions.BitmapScalingMode="Fant" Source="/Back_Arrow.png"
                    />
             <Button.Template>
                 <ControlTemplate TargetType="Button">

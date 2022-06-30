@@ -12,7 +12,7 @@
         FontFamily="Fonts/#Rubik">
     <Grid>
 
-        <Image x:Name="Company_logo" HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Source="C:\Users\Jakub\Desktop\Github\POSProject\Images\Reustaurant_logo.png" Margin="0,10,0,0"
+        <Image x:Name="Company_logo" HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Source="Reustaurant_logo.png" Margin="0,10,0,0"
                RenderOptions.BitmapScalingMode="Fant" />
         <TextBlock Text="Zaloguj się"
                                    Foreground="White"
@@ -69,8 +69,8 @@
                 FontWeight="Bold"
                 FontSize="20"
              Margin="510,10,10,452">
-            <Image Source="Images/Back_arrow.png"
-                   RenderOptions.BitmapScalingMode="Fant"
+            <Image
+                   RenderOptions.BitmapScalingMode="Fant" Source="/Back_Arrow.png"
                    />
             <Button.Template>
                 <ControlTemplate TargetType="Button">
