@@ -1,0 +1,182 @@
+﻿<Window x:Class="POSProject.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POSProject"
+        mc:Ignorable="d"
+        Title="Zarejestruj się"
+        Height="620" Width="900"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanResizeWithGrip"
+        Background="#444"
+        FontFamily="Fonts/#Rubik">
+    <Grid>
+        <Border BorderBrush="Orange" BorderThickness="1"/>
+
+        <!--First Column-->
+        <Image
+                       RenderOptions.BitmapScalingMode="Fant" 
+                       Margin="63,127,606,126" Source="/Reustaurant_logo.png"/>
+
+        <!--Second Column-->
+
+        <Label Content="Utwórz Konto" 
+               Foreground="White"
+               FontSize="20"
+               Margin="461,86,-461,-86"/>
+
+
+        <TextBlock Text="Wprowadź swój identyfikator" 
+                   Margin="299,179,116,292" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+        <TextBox x:Name="ID_Pracownik" FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="254"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Height="25"
+                 Margin="462,198,0,361"/>
+
+        <TextBlock Text="Imię" 
+                   Margin="244,235,172,235" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+        <TextBox x:Name="First_Name" FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="118"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Height="25"
+                 Margin="461,222,0,287"/>
+
+        <TextBlock Text="Nazwisko" 
+                   Margin="388,235,27,235" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+        <TextBox x:Name="Second_Name" FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="118"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Height="25"
+                 Margin="595,222,0,287"/>
+
+        <TextBlock Text="Wiek" 
+                   Margin="427,282,355,251" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+
+        <TextBox x:Name="Age" FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="118"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Margin="461,286,0,240" Height="30"/>
+
+
+
+        <TextBlock Text="Stanowisko:" 
+                   Margin="569,282,208,250" 
+                   Background="Transparent" 
+                   Foreground="#FFF37E15" 
+                   FontSize="11" 
+                   TextAlignment="Center"/>
+        <!--TO DO: FIND Solve how to make input type number and list-->
+
+        <Button Name="Back"
+                Click="Back_Click"
+            Foreground="White"
+                Background="Gray"
+                FontWeight="Bold"
+                FontSize="20"
+             Margin="399,416,121,10">
+            <Image
+                   RenderOptions.BitmapScalingMode="Fant" Source="/Back_Arrow.png"
+                   />
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="60" Height="40"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="CreateAccount_Button"  
+                Content="Utwórz konto" 
+                Margin="461,415,-95,9"
+                Foreground="White"
+                Background="#FFF37E15"
+                FontWeight="Bold"
+                FontSize="20"
+                >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="200" Height="45"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+        <ComboBox 
+            Name="Position"
+            HorizontalAlignment="Left"
+            Margin="596,300,0,0" 
+            VerticalAlignment="Top"
+            Height="30"
+            Width="120"
+            Background="Gray" BorderBrush="Gray" Opacity="0.4" Foreground="Orange">
+            <ComboBoxItem>Manager</ComboBoxItem>
+            <ComboBoxItem>Instruktor</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Użytkownik</ComboBoxItem>
+
+        </ComboBox>
+
+
+
+
+
+
+
+    </Grid>
+</Window>

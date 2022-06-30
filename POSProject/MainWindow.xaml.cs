@@ -57,6 +57,30 @@ namespace POSProject
             db.Drink.Add(new() { Name = "Water", Price = 5 });
 
             db.SaveChanges();
+            }
+
+
+        //Movement of Window
+        private void Grid_MouseDown(object sender , MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void Login1_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void btRegistration_Click(object sender, RoutedEventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Close();
         }
     }
 }

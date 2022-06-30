@@ -12,6 +12,19 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <None Remove="Back_Arrow.png" />
+    <None Remove="Logo.png" />
+    <None Remove="Reustaurant_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Back_Arrow.png" />
+    <Resource Include="Logo.png" />
+    <Resource Include="Reustaurant_logo.png" />
   </ItemGroup>
 
 </Project>
