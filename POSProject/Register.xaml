@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:POSProject"
         mc:Ignorable="d"
         Title="Zarejestruj się"
-        Height="570" Width="900"
+        Height="620" Width="900"
         WindowStyle="SingleBorderWindow"
-        ResizeMode="NoResize"
+        ResizeMode="CanResizeWithGrip"
         Background="#444"
         FontFamily="Fonts/#Rubik">
     <Grid>
@@ -28,33 +28,33 @@
 
 
         <TextBlock Text="Wprowadź swój identyfikator" 
-                   Margin="294,141,121,330" 
+                   Margin="299,179,116,292" 
                    Background="Transparent" 
                    Foreground="#FFF37E15" 
                    FontSize="11" 
                    TextAlignment="Center"/>
 
-        <TextBox FontFamily="Fonts/Rubik"
+        <TextBox x:Name="ID_Pracownik" FontFamily="Fonts/Rubik"
                  FontWeight="Light"
                  FontSize="20"
                  HorizontalAlignment="Left"
                  Foreground="White"
                  Background="Gray"
                  BorderThickness="0"
-                 Width="255"
+                 Width="254"
                  HorizontalContentAlignment="Left"
                  Opacity="0.7"
                  Height="25"
-                 Margin="461,160,0,349"/>
+                 Margin="462,198,0,361"/>
 
         <TextBlock Text="Imię" 
-                   Margin="231,202,184,268" 
+                   Margin="244,235,172,235" 
                    Background="Transparent" 
                    Foreground="#FFF37E15" 
                    FontSize="11" 
                    TextAlignment="Center"/>
 
-        <TextBox FontFamily="Fonts/Rubik"
+        <TextBox x:Name="First_Name" FontFamily="Fonts/Rubik"
                  FontWeight="Light"
                  FontSize="20"
                  HorizontalAlignment="Left"
@@ -68,13 +68,13 @@
                  Margin="461,222,0,287"/>
 
         <TextBlock Text="Nazwisko" 
-                   Margin="376,202,39,268" 
+                   Margin="388,235,27,235" 
                    Background="Transparent" 
                    Foreground="#FFF37E15" 
                    FontSize="11" 
                    TextAlignment="Center"/>
 
-        <TextBox FontFamily="Fonts/Rubik"
+        <TextBox x:Name="Second_Name" FontFamily="Fonts/Rubik"
                  FontWeight="Light"
                  FontSize="20"
                  HorizontalAlignment="Left"
@@ -88,16 +88,28 @@
                  Margin="595,222,0,287"/>
 
         <TextBlock Text="Wiek" 
-                   Margin="231,265,184,205" 
+                   Margin="427,282,355,251" 
                    Background="Transparent" 
                    Foreground="#FFF37E15" 
                    FontSize="11" 
                    TextAlignment="Center"/>
 
+        <TextBox x:Name="Age" FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="118"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Margin="461,286,0,240" Height="30"/>
+
 
 
         <TextBlock Text="Stanowisko:" 
-                   Margin="383,265,32,205" 
+                   Margin="569,282,208,250" 
                    Background="Transparent" 
                    Foreground="#FFF37E15" 
                    FontSize="11" 
@@ -146,6 +158,22 @@
             </Button.Template>
 
         </Button>
+        <ComboBox 
+            Name="Position"
+            HorizontalAlignment="Left"
+            Margin="596,300,0,0" 
+            VerticalAlignment="Top"
+            Height="30"
+            Width="120"
+            Background="Gray" BorderBrush="Gray" Opacity="0.4" Foreground="Orange">
+            <ComboBoxItem>Manager</ComboBoxItem>
+            <ComboBoxItem>Instruktor</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Użytkownik</ComboBoxItem>
+
+        </ComboBox>
+
+
+
 
 
 
