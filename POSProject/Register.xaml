@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:POSProject"
         mc:Ignorable="d"
         Title="Zarejestruj się"
-        Height="620" Width="900"
+        Height="720" Width="900"
         WindowStyle="SingleBorderWindow"
         ResizeMode="CanResizeWithGrip"
         Background="#444"
         FontFamily="Fonts/#Rubik">
     <Grid>
-        <Border BorderBrush="Orange" BorderThickness="1"/>
+        <Border BorderBrush="Orange" BorderThickness="1" Margin="2,0,2,0" Width="897"/>
 
         <!--First Column-->
         <Image
@@ -21,40 +21,15 @@
 
         <!--Second Column-->
 
-        <Label Content="Utwórz Konto" 
-               Foreground="White"
-               FontSize="20"
-               Margin="461,86,-461,-86"/>
-
 
         <TextBlock Text="Wprowadź swój identyfikator" 
-                   Margin="299,179,116,292" 
+                   Margin="462,191,0,0" 
                    Background="Transparent" 
                    Foreground="#FFF37E15" 
                    FontSize="11" 
-                   TextAlignment="Center"/>
+                   TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="ID_Pracownik" FontFamily="Fonts/Rubik"
-                 FontWeight="Light"
-                 FontSize="20"
-                 HorizontalAlignment="Left"
-                 Foreground="White"
-                 Background="Gray"
-                 BorderThickness="0"
-                 Width="254"
-                 HorizontalContentAlignment="Left"
-                 Opacity="0.7"
-                 Height="25"
-                 Margin="462,198,0,361"/>
-
-        <TextBlock Text="Imię" 
-                   Margin="244,235,172,235" 
-                   Background="Transparent" 
-                   Foreground="#FFF37E15" 
-                   FontSize="11" 
-                   TextAlignment="Center"/>
-
-        <TextBox x:Name="First_Name" FontFamily="Fonts/Rubik"
+        <TextBox x:Name="tbFirstName" FontFamily="Fonts/Rubik"
                  FontWeight="Light"
                  FontSize="20"
                  HorizontalAlignment="Left"
@@ -65,16 +40,9 @@
                  HorizontalContentAlignment="Left"
                  Opacity="0.7"
                  Height="25"
-                 Margin="461,222,0,287"/>
+                 Margin="462,-135,0,0"/>
 
-        <TextBlock Text="Nazwisko" 
-                   Margin="388,235,27,235" 
-                   Background="Transparent" 
-                   Foreground="#FFF37E15" 
-                   FontSize="11" 
-                   TextAlignment="Center"/>
-
-        <TextBox x:Name="Second_Name" FontFamily="Fonts/Rubik"
+        <TextBox x:Name="tbSecondName" FontFamily="Fonts/Rubik"
                  FontWeight="Light"
                  FontSize="20"
                  HorizontalAlignment="Left"
@@ -85,16 +53,9 @@
                  HorizontalContentAlignment="Left"
                  Opacity="0.7"
                  Height="25"
-                 Margin="595,222,0,287"/>
+                 Margin="598,-135,0,0"/>
 
-        <TextBlock Text="Wiek" 
-                   Margin="427,282,355,251" 
-                   Background="Transparent" 
-                   Foreground="#FFF37E15" 
-                   FontSize="11" 
-                   TextAlignment="Center"/>
-
-        <TextBox x:Name="Age" FontFamily="Fonts/Rubik"
+        <TextBox x:Name="tbAge" FontFamily="Fonts/Rubik"
                  FontWeight="Light"
                  FontSize="20"
                  HorizontalAlignment="Left"
@@ -104,16 +65,7 @@
                  Width="118"
                  HorizontalContentAlignment="Left"
                  Opacity="0.7"
-                 Margin="461,286,0,240" Height="30"/>
-
-
-
-        <TextBlock Text="Stanowisko:" 
-                   Margin="569,282,208,250" 
-                   Background="Transparent" 
-                   Foreground="#FFF37E15" 
-                   FontSize="11" 
-                   TextAlignment="Center"/>
+                 Margin="462,-30,0,0" Height="30"/>
         <!--TO DO: FIND Solve how to make input type number and list-->
 
         <Button Name="Back"
@@ -138,7 +90,7 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="CreateAccount_Button"  
+        <Button x:Name="btCreateAccount"  
                 Content="Utwórz konto" 
                 Margin="461,415,-95,9"
                 Foreground="White"
@@ -159,18 +111,62 @@
 
         </Button>
         <ComboBox 
-            Name="Position"
+            x:Name="cbPosition"
             HorizontalAlignment="Left"
-            Margin="596,300,0,0" 
+            Margin="596,311,0,0" 
             VerticalAlignment="Top"
             Height="30"
             Width="120"
-            Background="Gray" BorderBrush="Gray" Opacity="0.4" Foreground="Orange">
+            Background="Gray" BorderBrush="Gray" Opacity="0.7" Foreground="Orange">
             <ComboBoxItem>Manager</ComboBoxItem>
             <ComboBoxItem>Instruktor</ComboBoxItem>
             <ComboBoxItem IsSelected="True">Użytkownik</ComboBoxItem>
 
         </ComboBox>
+        <TextBlock 
+            Margin="461,247,0,0" 
+            Background="Transparent" 
+            Foreground="#FFF37E15" 
+            FontSize="11" 
+            TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25"><Run Language="pl-pl" Text="Imię"/></TextBlock>
+        <TextBlock 
+            Margin="596,247,0,0" 
+            Background="Transparent" 
+            Foreground="#FFF37E15" 
+            FontSize="11" 
+            TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56"><Run Language="pl-pl" Text="Nazwisko"/></TextBlock>
+        <TextBlock 
+            Margin="462,298,0,0" 
+            Background="Transparent" 
+            Foreground="#FFF37E15" 
+            FontSize="11" 
+            TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="25"><Run Language="pl-pl" Text="Wiek"/></TextBlock>
+        <TextBlock 
+            Margin="596,298,0,0" 
+            Background="Transparent" 
+            Foreground="#FFF37E15" 
+            FontSize="11" 
+            TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Text="Stanowisko"/>
+        <TextBlock 
+            HorizontalAlignment="Left" 
+            Height="31" 
+            Margin="462,87,0,0" 
+            Text="Utwórz Konto" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="130" Foreground="White" FontSize="20"/>
+        <TextBox x:Name="tbIdPracownik" FontFamily="Fonts/Rubik"
+                 FontWeight="Light"
+                 FontSize="20"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
+                 Background="Gray"
+                 BorderThickness="0"
+                 Width="254"
+                 HorizontalContentAlignment="Left"
+                 Opacity="0.7"
+                 Height="25"
+            Margin="462,-245,0,0" MinHeight="25" HorizontalScrollBarVisibility="Hidden" FlowDirection="LeftToRight"/>
 
 
 

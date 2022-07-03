@@ -35,29 +35,38 @@ namespace POSProject
 
         private void InitializeTablesValue(SQLiteContext db)
         {
-            //Pizzas
-            db.Pizza.Add(new() { Name = "Margherita", Price = 29 });
-            db.Pizza.Add(new() { Name = "Funghi", Price = 30 });
-            db.Pizza.Add(new() { Name = "Salami", Price = 32 });
-            db.Pizza.Add(new() { Name = "Capricciosa", Price = 32 });
-            db.Pizza.Add(new() { Name = "Hawajska", Price = 32 });
-            db.Pizza.Add(new() { Name = "Quarttro", Price = 34 });
+            if(db.Pizza.Count() == 0)
+            {
+                //Pizzas
+                db.Pizza.Add(new() { Name = "Margherita", Price = 29 });
+                db.Pizza.Add(new() { Name = "Funghi", Price = 30 });
+                db.Pizza.Add(new() { Name = "Salami", Price = 32 });
+                db.Pizza.Add(new() { Name = "Capricciosa", Price = 32 });
+                db.Pizza.Add(new() { Name = "Hawajska", Price = 32 });
+                db.Pizza.Add(new() { Name = "Quarttro", Price = 34 });
+            }
 
-            //Extras
-            db.Extra.Add(new() { Name = "Chicken", Price = 5 });
-            db.Extra.Add(new() { Name = "Cheesee", Price = 2 });
-            db.Extra.Add(new() { Name = "Mushrooms", Price = 2 });
-            db.Extra.Add(new() { Name = "Spinaci", Price = 3 });
-            db.Extra.Add(new() { Name = "Salami", Price = 4 });
+            if (db.Extra.Count() == 0)
+            {
+                //Extras
+                db.Extra.Add(new() { Name = "Chicken", Price = 5 });
+                db.Extra.Add(new() { Name = "Cheesee", Price = 2 });
+                db.Extra.Add(new() { Name = "Mushrooms", Price = 2 });
+                db.Extra.Add(new() { Name = "Spinaci", Price = 3 });
+                db.Extra.Add(new() { Name = "Salami", Price = 4 });
+            }
 
-            //Drinks
-            db.Drink.Add(new() { Name = "CocaCola", Price = 7 });
-            db.Drink.Add(new() { Name = "Fanta", Price = 7 });
-            db.Drink.Add(new() { Name = "Sprite", Price = 7 });
-            db.Drink.Add(new() { Name = "Water", Price = 5 });
+            if (db.Drink.Count() == 0)
+            {
+                //Drinks
+                db.Drink.Add(new() { Name = "CocaCola", Price = 7 });
+                db.Drink.Add(new() { Name = "Fanta", Price = 7 });
+                db.Drink.Add(new() { Name = "Sprite", Price = 7 });
+                db.Drink.Add(new() { Name = "Water", Price = 5 });
+            }
 
             db.SaveChanges();
-            }
+        }
 
 
         //Movement of Window
