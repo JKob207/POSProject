@@ -12,7 +12,9 @@
         Background="#444"
         FontFamily="Fonts/#Rubik">
     <Grid>
-        <Border BorderBrush="Orange" BorderThickness="1" Margin="2,0,2,0" Width="897"/>
+        <Border BorderBrush="Orange" BorderThickness="1" Margin="2,0,2,0" Width="897">
+            <TextBlock x:Name="tbError" HorizontalAlignment="Left" Height="21" Margin="459,154,0,0" Text="fccddd" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" Visibility="Hidden" IsEnabled="False" Foreground="Red"/>
+        </Border>
 
         <!--First Column-->
         <Image
@@ -90,7 +92,8 @@
             </Button.Template>
         </Button>
 
-        <Button x:Name="btCreateAccount"  
+        <Button x:Name="btCreateAccount"
+                Click="btCreateAccount_Click"
                 Content="Utwórz konto" 
                 Margin="461,415,-95,9"
                 Foreground="White"
