@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POSProject"
         mc:Ignorable="d"
-        Title="App_Window" Height="450" Width="800">
+        Title="App_Window" Height="650" Width="1000">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Height="120" VerticalAlignment="Top" Foreground="White" Background="Red">
+
+
+        </TextBlock>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Height="514.04" VerticalAlignment="Bottom" Background="#FF6D6D6D" Foreground="#FFFFEEEE" FontFamily="Rubik Light" FontSize="22"/>
+        <ToolBarPanel Grid.Column="1" Height="120" VerticalAlignment="Top">
+            <ToolBarPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF464848" Offset="0.146"/>
+                    <GradientStop Color="#FF464848"/>
+                </LinearGradientBrush>
+            </ToolBarPanel.Background>
+        </ToolBarPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" Height="170" Margin="0,120,0,0">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF943333"/>
+                    <GradientStop Color="#FFFF6262" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+        </StackPanel>
+        <Label Content="Johnny Seafood" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="30"/>
+
+
+
+
     </Grid>
 </Window>
