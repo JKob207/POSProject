@@ -1,21 +1,21 @@
-﻿<Window x:Class="POSProject.App_Window"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POSProject"
+        xmlns:System="clr-namespace:System;assembly=System.Runtime" x:Class="POSProject.App_Window"
         mc:Ignorable="d"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"              
         Title="App_Window" Height="650" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Height="120" VerticalAlignment="Top" Foreground="White" Background="Orange">
-
-
-        </TextBlock>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Height="514.04" VerticalAlignment="Bottom" Background="#FF6D6D6D" Foreground="#FFFFEEEE" FontFamily="Rubik Light" FontSize="22"/>
+        <TextBlock Height="120" VerticalAlignment="Top" Foreground="White" Background="Orange"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Height="530" VerticalAlignment="Top" Background="#FF6D6D6D" Foreground="#FFFFEEEE" FontFamily="Rubik Light" FontSize="22" Margin="0,120,0,0"/>
         <ToolBarPanel Grid.Column="1" Height="120" VerticalAlignment="Top">
             <ToolBarPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -24,6 +24,20 @@
                     <GradientStop Color="#FF464848"/>
                 </LinearGradientBrush>
             </ToolBarPanel.Background>
+            <Grid Height="100" VerticalAlignment="Center">
+            <TextBlock Text="{Binding StringFormat=dd/MM/yyyy, Source={x:Static System:DateTime.Now}}"
+                Foreground="White"
+                FontWeight="Light" FontFamily="Rubik Light" FontSize="24" HorizontalAlignment="Center" Margin="0,2,0,0"
+              />
+                <TextBlock x:Name="OrderTaker_Info" Text="Kasjer 333"  Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center" Margin="136,36,330,0"  />
+                <TextBlock x:Name="Name_Info" Text="Jakub Kołodziej"  Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center" Margin="299,36,134,0"  />
+                <TextBlock x:Name="Number_Info" Text="Kasa nr.4"  Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center" Margin="202,77,230,-42"  />
+                <Border BorderBrush="Orange" BorderThickness="3" Margin="202,0,206,-10"/>
+                <Border BorderBrush="Orange" BorderThickness="3" Margin="202,30,206,-10"/>
+                <Border BorderBrush="Orange" BorderThickness="3" Margin="202,70,206,-10"/>
+                <Border BorderBrush="Orange" BorderThickness="2" Margin="202,30,377,28"/>
+
+            </Grid>
         </ToolBarPanel>
         <StackPanel Grid.Column="1" VerticalAlignment="Top" Height="170" Margin="0,120,0,0">
             <StackPanel.Background>
@@ -32,6 +46,105 @@
                     <GradientStop Color="#FFFF6262" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
+            <Button x:Name="Pizza_Button" Content="Pizza" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-252" Y="6"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Style>
+                    <Style/>
+                </Button.Style>
+            </Button>
+            <Button x:Name="Trimmings_Button" Content="Dodatki" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-2" Y="-44"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Style>
+                    <Style/>
+                </Button.Style>
+            </Button>
+            <Button x:Name="Multiply_1Button" Content="1" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="9" Y="-26"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="Drinks_Button" Content="Napoje" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="251" Y="-177"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Style>
+                    <Style/>
+                </Button.Style>
+            </Button>
+            <Button x:Name="Multiply_2Button_Copy" Content="2" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-192" Y="-161"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="Multiply_3Button" Content="3" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-68" Y="-246"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="Multiply_4Button" Content="4" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="60" Y="-331"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="Multiply_5Button" Content="5" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="183" Y="-414"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="Multiply_6Button" Content="6" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="301" Y="-499"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
         </StackPanel>
         <Label Content="Johnny Seafood" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="30"/>
         <StackPanel x:Name="Default_Screen" Grid.Column="1" Background="#FF1D83E2" Margin="0,290,0,0"/>

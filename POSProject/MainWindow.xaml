@@ -78,7 +78,7 @@
                         FontSize="10"
                         FontWeight="Medium"
                         Margin="0,0,10,0"
-                    Grid.Column="8">
+                    Grid.Column="8" Cursor="Hand">
 
                 <Button.Style>
                     <Style TargetType="Button">

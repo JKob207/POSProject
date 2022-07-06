@@ -30,5 +30,14 @@ namespace POSProject
             home.Show();
             this.Close();
         }
+
+        private void Test(object sender, RoutedEventArgs e)
+        {
+            App_Window main = new App_Window();
+            main.Show();
+            this.Close();
+        }
+
+        
     }
 }
