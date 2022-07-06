@@ -11,7 +11,7 @@
             <ColumnDefinition Width="250"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Height="120" VerticalAlignment="Top" Foreground="White" Background="Red">
+        <TextBlock Height="120" VerticalAlignment="Top" Foreground="White" Background="Orange">
 
 
         </TextBlock>
@@ -28,12 +28,13 @@
         <StackPanel Grid.Column="1" VerticalAlignment="Top" Height="170" Margin="0,120,0,0">
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF943333"/>
+                    <GradientStop Color="Orange"/>
                     <GradientStop Color="#FFFF6262" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
         </StackPanel>
         <Label Content="Johnny Seafood" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="30"/>
+        <StackPanel x:Name="Default_Screen" Grid.Column="1" Background="#FF1D83E2" Margin="0,290,0,0"/>
 
 
 
