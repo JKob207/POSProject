@@ -27,4 +27,17 @@
     <Resource Include="Reustaurant_logo.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Pizza_Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pizza_Page.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

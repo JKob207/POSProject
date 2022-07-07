@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POSProject.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,9 +25,24 @@ namespace POSProject
             InitializeComponent();
         }
 
-                   
+       
 
+        //Buttons whose open pages
+        private void Pizza_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Pages_Screen.Content = new Pizza_Page();
 
+        }
+
+        private void Trimmings_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Pages_Screen.Content = new Trimmings_Page();
+        }
+
+        private void Drinks_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Pages_Screen.Content = new Drinks_Page();
+        }
     }
 
 
