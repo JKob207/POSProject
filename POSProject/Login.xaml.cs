@@ -31,6 +31,7 @@ namespace POSProject
             this.Close();
         }
 
+
         private void Test(object sender, RoutedEventArgs e)
         {
             App_Window main = new App_Window();
@@ -39,5 +40,31 @@ namespace POSProject
         }
 
         
+        private void Run_Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Downloaded data from user input
+            string userIdString = tbUserIdLogin.Text;
+            int userId = default(int);
+                
+            bool checkIfNumber = int.TryParse(userIdString, out userId);
+            if(checkIfNumber != true)
+            {
+                tbUserIdLogin.Text = "Wprowadź poprawne ID!";
+                return;
+            }
+
+            // Search for ID in database
+            using var dbContext = new SQLiteContext();
+            dbContext.Database.EnsureCreated();
+            var result = dbContext.Employee.Where(e => e.EmployeerID == userId).FirstOrDefault();
+
+            if(result == null)
+            {
+                tbUserIdLogin.Text = "Błędne ID!";
+            }else
+            {
+                tbUserIdLogin.Text = "ID jest OK";
+            }
+        }
     }
 }

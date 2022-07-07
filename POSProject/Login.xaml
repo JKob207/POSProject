@@ -25,9 +25,8 @@
 
         <Border BorderBrush="White" BorderThickness="1" Margin="106,227,106,30">
 
-            <PasswordBox FontFamily="Fonts/Rubik"
+            <TextBox x:Name="tbUserIdLogin" FontFamily="Fonts/Rubik"
                              FontWeight="Light"
-                             
                              FontSize="20"
                              HorizontalAlignment="Center"
                              Foreground="White"
@@ -42,7 +41,8 @@
 
 
         </Border>
-        <Button x:Name="Run_Button"  
+        <Button x:Name="Run_Button"
+                Click="Run_Button_Click"
                 Content="Uruchom" 
                 Margin="183,371,182,72"
                 Foreground="White"

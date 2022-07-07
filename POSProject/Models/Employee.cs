@@ -8,12 +8,6 @@ using System.Threading.Tasks;
 
 namespace POSProject
 {
-    public enum Role
-    {
-        Manager,
-        Worker
-    }
-
     public class Employee
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -22,6 +16,6 @@ namespace POSProject
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Age { get; set; }
-        public Role EmployeerRole { get; set; }
+        public string EmployeerRole { get; set; }
     }
 }
