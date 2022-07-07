@@ -1,0 +1,39 @@
+﻿<Page x:Class="POSProject.Pages.Pizza_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:POSProject.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="344.04" d:DesignWidth="750"
+      Title="Pizza_Page">
+
+    <Grid>
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Height="130" 
+              Width="750">
+            <Button  Name="Margherita" Content="Margherita" Foreground="White"  Background="#FFC8501E" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
+            <Button  Name="Funghi" Content="Funghi" Foreground="White"  Background="#FFCBB985" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
+            <Button Name="Salami" Content="Salami" Foreground="White"  Background="#FFC26256" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+
+
+
+        </Grid>
+
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Height="130" 
+              Width="750">
+
+            <Button  Name="Capriciosa" Content="Capriciosa" Foreground="White"  Background="#FFB58D40" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
+            <Button  Name="Roma" Content="Roma" Foreground="White"  Background="#FF9B3F3A" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
+            <Button Name="Venezia" Content="Venezia" Foreground="White"  Background="#FF1C151A" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+
+        </Grid>
+        <Grid VerticalAlignment="Top" Height="128" Margin="0,216,0,0">
+            <Button Name="Confirm" Content="Zatwierdź" Foreground="Orange" FontWeight="Medium"  Background="#333" BorderBrush="Yellow" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="400" />
+
+        </Grid>
+    </Grid>
+</Page>

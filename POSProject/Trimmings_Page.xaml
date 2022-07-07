@@ -1,0 +1,42 @@
+﻿<Page x:Class="POSProject.Trimmings_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:POSProject"
+      mc:Ignorable="d" 
+      d:DesignHeight="344.04" d:DesignWidth="750"
+      Title="Trimmings_Page">
+
+    <Grid>
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Height="130" 
+              Width="750">
+            <Button  Name="Olives" Content="Oliwki" Foreground="White"  Background="#FFC5C441" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
+            <Button  Name="Garlic" Content="Czosnek w oliwie" Foreground="White"  Background="#FFD6C19E" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
+            <Button Name="Jalapeno" Content="Jalapeño" Foreground="White"  Background="#FF98AE0D" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+
+
+
+        </Grid>
+
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Height="130" 
+              Width="750">
+
+            <Button  Name="Rocket" Content="Rukola" Foreground="White"  Background="#FF11A30B" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
+            <Button  Name="Pesto" Content="Pesto" Foreground="White"  Background="#FF74A632" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
+            <Button Name="Pineapple" Content="Ananas" Foreground="White"  Background="#FFD18539" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+
+        </Grid>
+
+        <Grid VerticalAlignment="Top" Height="128" Margin="0,216,0,0">
+            <Button Name="Confirm" Content="Zatwierdź" Foreground="Orange" FontWeight="Medium"  Background="#333" BorderBrush="Yellow" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="400" />
+
+        </Grid>
+
+
+    </Grid>
+</Page>

@@ -31,6 +31,15 @@ namespace POSProject
             this.Close();
         }
 
+
+        private void Test(object sender, RoutedEventArgs e)
+        {
+            App_Window main = new App_Window();
+            main.Show();
+            this.Close();
+        }
+
+        
         private void Run_Button_Click(object sender, RoutedEventArgs e)
         {
             // Downloaded data from user input
