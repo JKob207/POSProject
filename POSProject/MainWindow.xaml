@@ -62,16 +62,7 @@
                FontWeight="Light"
               />
 
-
-            <TextBlock Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=HH:MM}"
-               Foreground="#db5000"
-               Grid.Column="3"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Center"
-               FontWeight="Light" Margin="0,5,0,0"
-              />
-
-            <Button Content=" Zaloguj"
+            <Button Content="Zaloguj"
                     Name="Login2"
                     Click="Login1_Click"
                         Foreground="White"

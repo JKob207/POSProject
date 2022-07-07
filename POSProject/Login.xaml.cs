@@ -31,14 +31,6 @@ namespace POSProject
             this.Close();
         }
 
-
-        private void Test(object sender, RoutedEventArgs e)
-        {
-            App_Window main = new App_Window();
-            main.Show();
-            this.Close();
-        }
-
         
         private void Run_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -63,7 +55,9 @@ namespace POSProject
                 tbUserIdLogin.Text = "Błędne ID!";
             }else
             {
-                tbUserIdLogin.Text = "ID jest OK";
+                App_Window main = new App_Window();
+                main.Show();
+                this.Close();
             }
         }
     }

@@ -49,7 +49,6 @@
                 Background="#FFF37E15"
                 FontWeight="Bold"
                 FontSize="20"
-                Click="Test"
                 >
             <Button.Template>
                 <ControlTemplate TargetType="Button">
