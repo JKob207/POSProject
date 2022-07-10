@@ -20,28 +20,102 @@ namespace POSProject
     /// </summary>
     public partial class App_Window : Window
     {
-        public App_Window()
+        public App_Window(int ID, string Name, string Surname, string Role)
         {
+            EmployeerID = ID;
+            EmployeerName = Name;
+            EmployeerSurname = Surname;
+            EmployeerRole = Role;
+
             InitializeComponent();
+            InitalizeDataBaseInfo();
+
+            Multiply = 1;
+
+            tbName.Text = EmployeerName + " " + EmployeerSurname;
+            tbWorkerInfo.Text = EmployeerRole + " " + EmployeerID;
         }
 
-       
+        public int Multiply { get; set; }
+        public int EmployeerID { get; set; }
+        public string EmployeerName { get; set; }
+        public string EmployeerSurname { get; set; }
+        public string EmployeerRole { get; set; }
+
+
+        private void InitalizeDataBaseInfo()
+        {
+
+        }
 
         //Buttons whose open pages
-        private void Pizza_Button_Click(object sender, RoutedEventArgs e)
+        private void btPizza_Click(object sender, RoutedEventArgs e)
         {
             Pages_Screen.Content = new Pizza_Page();
+            btExtras.IsEnabled = true;
 
         }
-
-        private void Trimmings_Button_Click(object sender, RoutedEventArgs e)
+        private void btExtras_Click(object sender, RoutedEventArgs e)
         {
             Pages_Screen.Content = new Trimmings_Page();
         }
 
-        private void Drinks_Button_Click(object sender, RoutedEventArgs e)
+        private void btDrinks_Click(object sender, RoutedEventArgs e)
         {
             Pages_Screen.Content = new Drinks_Page();
+            btExtras.IsEnabled = false;
+        }
+
+        private void ResetMultipleButtonsBc()
+        {
+            btMultiply1.Background = (Brush)new BrushConverter().ConvertFrom("#FF564F4F");
+            btMultiply2.Background = (Brush)new BrushConverter().ConvertFrom("#FF564F4F");
+            btMultiply3.Background = (Brush)new BrushConverter().ConvertFrom("#FF564F4F");
+            btMultiply4.Background = (Brush)new BrushConverter().ConvertFrom("#FF564F4F");
+            btMultiply5.Background = (Brush)new BrushConverter().ConvertFrom("#FF564F4F");
+            btMultiply6.Background = (Brush)new BrushConverter().ConvertFrom("#FF564F4F");
+        }
+
+        private void btMultiply1_Click(object sender, RoutedEventArgs e)
+        {
+            Multiply = 1;
+            ResetMultipleButtonsBc();
+            btMultiply1.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
+        }
+
+        private void btMultiply2_Click(object sender, RoutedEventArgs e)
+        {
+            Multiply = 2;
+            ResetMultipleButtonsBc();
+            btMultiply2.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
+        }
+
+        private void btMultiply3_Click(object sender, RoutedEventArgs e)
+        {
+            Multiply = 3;
+            ResetMultipleButtonsBc();
+            btMultiply3.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
+        }
+
+        private void btMultiply4_Click(object sender, RoutedEventArgs e)
+        {
+            Multiply = 4;
+            ResetMultipleButtonsBc();
+            btMultiply4.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
+        }
+
+        private void btMultiply5_Click(object sender, RoutedEventArgs e)
+        {
+            Multiply = 5;
+            ResetMultipleButtonsBc();
+            btMultiply5.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
+        }
+
+        private void btMultiply6_Click(object sender, RoutedEventArgs e)
+        {
+            Multiply = 6;
+            ResetMultipleButtonsBc();
+            btMultiply6.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
         }
     }
 

@@ -47,7 +47,7 @@
                     <GradientStop Color="#FFFF6262" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <Button x:Name="btPizza" Click="Pizza_Button_Click" Content="Pizza" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
+            <Button x:Name="btPizza" Click="btPizza_Click" Content="Pizza" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -60,7 +60,7 @@
                     <Style/>
                 </Button.Style>
             </Button>
-            <Button x:Name="btExtras" Click="Trimmings_Button_Click" Content="Dodatki" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btExtras" Click="btExtras_Click" Content="Dodatki" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -73,7 +73,7 @@
                     <Style/>
                 </Button.Style>
             </Button>
-            <Button x:Name="btMultiply1" Content="1" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply1" Content="1" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" Click="btMultiply1_Click">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -83,7 +83,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="btDrinks" Click="Drinks_Button_Click" Content="Napoje" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
+            <Button x:Name="btDrinks" Click="btDrinks_Click" Content="Napoje" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -96,7 +96,7 @@
                     <Style/>
                 </Button.Style>
             </Button>
-            <Button x:Name="btMultiply2" Content="2" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button x:Name="btMultiply2" Content="2" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btMultiply2_Click">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -106,7 +106,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="btMultiply3" Content="3" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply3" Content="3" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" Click="btMultiply3_Click">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -116,7 +116,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="btMultiply4" Content="4" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply4" Content="4" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" Click="btMultiply4_Click">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -126,7 +126,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="btMultiply5" Content="5" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply5" Content="5" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" Click="btMultiply5_Click">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -136,7 +136,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="btMultiply6" Content="6" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply6" Content="6" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" Click="btMultiply6_Click">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
