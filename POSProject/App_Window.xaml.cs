@@ -32,6 +32,7 @@ namespace POSProject
 
             // Initialize default values
             Multiply = 1;
+            TotalPrice = 0;
             addExtras = false;
 
             // Add employeer data to components
@@ -40,7 +41,9 @@ namespace POSProject
         }
 
         public int Multiply { get; set; }
+        public int TotalPrice { get; set; }
         public bool addExtras { get; set; }
+
         public int EmployeerID { get; set; }
         public string EmployeerName { get; set; }
         public string EmployeerSurname { get; set; }

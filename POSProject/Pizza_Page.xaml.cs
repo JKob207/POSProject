@@ -29,6 +29,8 @@ namespace POSProject.Pages
         {
             int pizzaPrice = price * ((App_Window)Window.GetWindow(this)).Multiply;
             string pizzaOrder = pizza + " x" + ((App_Window)Window.GetWindow(this)).Multiply.ToString() + "\t " + pizzaPrice+"zł";
+            ((App_Window)Window.GetWindow(this)).TotalPrice = ((App_Window)Window.GetWindow(this)).TotalPrice + pizzaPrice;
+            ((App_Window)Window.GetWindow(this)).tbTotalPrice.Text = "Całkowita cena: " + ((App_Window)Window.GetWindow(this)).TotalPrice+"zł";
             ((App_Window)Window.GetWindow(this)).addExtras = true;
             ((App_Window)Window.GetWindow(this)).lbBill.Items.Add(pizzaOrder);
         }

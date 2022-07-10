@@ -151,7 +151,8 @@
 
         <Frame x:Name="Pages_Screen" Grid.Column="1" Margin="0,290,0,0" NavigationUIVisibility="Hidden" Background="#FFFFA262" Source="/Pizza_Page.xaml">
         </Frame>
-        <Button x:Name="btNewOrder" Content="Nowe zamówienie" HorizontalAlignment="Center" Height="56" Margin="0,545,0,0" VerticalAlignment="Top" Width="230" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" FontSize="20" Click="btNewOrder_Click"/>
+        <Button x:Name="btNewOrder" Content="Nowe zamówienie" HorizontalAlignment="Left" Height="56" Margin="6,568,0,0" VerticalAlignment="Top" Width="234" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" FontSize="20" Click="btNewOrder_Click"/>
+        <TextBlock x:Name="tbTotalPrice" HorizontalAlignment="Left" Height="34" Margin="15,529,0,0" Text="Całkowita cena: 0zł" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" TextAlignment="Center" FontFamily="Rubik Light" FontSize="24"/>
 
 
 
