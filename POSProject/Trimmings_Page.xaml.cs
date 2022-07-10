@@ -24,5 +24,46 @@ namespace POSProject
         {
             InitializeComponent();
         }
+
+        private void addExtras(string extra, int price)
+        {
+            if(((App_Window)Window.GetWindow(this)).addExtras == true)
+            {
+                int extraPrice = price * ((App_Window)Window.GetWindow(this)).Multiply;
+                string extrasOrder = "\t" + extra + " x" + ((App_Window)Window.GetWindow(this)).Multiply.ToString() + " " + extraPrice + "zł";
+                ((App_Window)Window.GetWindow(this)).addExtras = true;
+                ((App_Window)Window.GetWindow(this)).lbBill.Items.Add(extrasOrder);
+            }
+        }
+
+        private void Olives_Click(object sender, RoutedEventArgs e)
+        {
+            addExtras("Oliwki", 2);
+        }
+
+        private void Garlic_Click(object sender, RoutedEventArgs e)
+        {
+            addExtras("Czosnek", 3);
+        }
+
+        private void Jalapeno_Click(object sender, RoutedEventArgs e)
+        {
+            addExtras("Jalapeno", 3);
+        }
+
+        private void Rocket_Click(object sender, RoutedEventArgs e)
+        {
+            addExtras("Rukola", 2);
+        }
+
+        private void Pesto_Click(object sender, RoutedEventArgs e)
+        {
+            addExtras("Pesto", 3);
+        }
+
+        private void Pineapple_Click(object sender, RoutedEventArgs e)
+        {
+            addExtras("Ananas", 5);
+        }
     }
 }

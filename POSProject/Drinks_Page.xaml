@@ -13,9 +13,9 @@
               VerticalAlignment="Top"
               Height="130" 
               Width="750">
-            <Button  Name="Coke" Content="Coca-Cola" Foreground="White"  Background="#FFDB2A32" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
-            <Button  Name="Sprite" Content="Sprite" Foreground="White"  Background="#FF7BB57D" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
-            <Button Name="Fanta" Content="Fanta" Foreground="White"  Background="#FFE48C36" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+            <Button  Name="Coke" Content="Coca-Cola 6zł" Foreground="White"  Background="#FFDB2A32" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40" Click="Coke_Click"/>
+            <Button  Name="Sprite" Content="Sprite 7zł" Foreground="White"  Background="#FF7BB57D" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40" Click="Sprite_Click"/>
+            <Button Name="Fanta" Content="Fanta 6zł" Foreground="White"  Background="#FFE48C36" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40" Click="Fanta_Click"/>
 
 
 
@@ -26,9 +26,9 @@
               Height="130" 
               Width="750">
 
-            <Button  Name="Coke_ZERO" Content="Coca Cola ZERO"                          Foreground="White" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40" Background="#FF2F2F31"/>
-            <Button  Name="Sparkling_Water" Content="Woda gazowana"                     Foreground="#FF6B6B6B"  Background="#FFC9DDE8" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
-            <Button Name="Flat_water" Content="Woda niegazowana"                        Foreground="White"  Background="#FF0776B0" FontFamily="Fonts/#Rubik" FontSize="21" Height="50" Width="200" Margin="525,40,25,40"/>
+            <Button  Name="Coke_ZERO" Content="Coca Cola ZERO 6zł"                          Foreground="White" FontFamily="Fonts/#Rubik" FontSize="20" Height="50" Width="200" Margin="25,40,525,40" Background="#FF2F2F31" Click="Coke_ZERO_Click"/>
+            <Button  Name="Sparkling_Water" Content="Woda gazowana 5zł"                     Foreground="#FF6B6B6B"  Background="#FFC9DDE8" FontFamily="Fonts/#Rubik" FontSize="20" Height="50" Width="200" Margin="275,40,275,40" Click="Sparkling_Water_Click"/>
+            <Button Name="Flat_water" Content="Woda niegazowana 5zł"                        Foreground="White"  Background="#FF0776B0" FontFamily="Fonts/#Rubik" FontSize="18" Height="50" Width="200" Margin="525,40,25,40" Click="Flat_water_Click"/>
 
         </Grid>
 

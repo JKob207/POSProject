@@ -22,31 +22,31 @@ namespace POSProject
     {
         public App_Window(int ID, string Name, string Surname, string Role)
         {
+            // Parse employeer data
             EmployeerID = ID;
             EmployeerName = Name;
             EmployeerSurname = Surname;
             EmployeerRole = Role;
 
             InitializeComponent();
-            InitalizeDataBaseInfo();
 
+            // Initialize default values
             Multiply = 1;
+            addExtras = false;
 
+            // Add employeer data to components
             tbName.Text = EmployeerName + " " + EmployeerSurname;
             tbWorkerInfo.Text = EmployeerRole + " " + EmployeerID;
         }
 
         public int Multiply { get; set; }
+        public bool addExtras { get; set; }
         public int EmployeerID { get; set; }
         public string EmployeerName { get; set; }
         public string EmployeerSurname { get; set; }
         public string EmployeerRole { get; set; }
+        public string Order { get; set; }
 
-
-        private void InitalizeDataBaseInfo()
-        {
-
-        }
 
         //Buttons whose open pages
         private void btPizza_Click(object sender, RoutedEventArgs e)
@@ -76,6 +76,7 @@ namespace POSProject
             btMultiply6.Background = (Brush)new BrushConverter().ConvertFrom("#FF564F4F");
         }
 
+        // Multiply buttons
         private void btMultiply1_Click(object sender, RoutedEventArgs e)
         {
             Multiply = 1;
@@ -116,6 +117,11 @@ namespace POSProject
             Multiply = 6;
             ResetMultipleButtonsBc();
             btMultiply6.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
+        }
+
+        private void btNewOrder_Click(object sender, RoutedEventArgs e)
+        {
+            lbBill.Items.Clear();
         }
     }
 

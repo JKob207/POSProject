@@ -13,9 +13,9 @@
               VerticalAlignment="Top"
               Height="130" 
               Width="750">
-            <Button  Name="Margherita" Content="Margherita" Foreground="White"  Background="#FFC8501E" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
-            <Button  Name="Funghi" Content="Funghi" Foreground="White"  Background="#FFCBB985" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
-            <Button Name="Salami" Content="Salami" Foreground="White"  Background="#FFC26256" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+            <Button  Name="Margherita" Content="Margherita 20zł" Foreground="White"  Background="#FFC8501E" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40" Click="Margherita_Click"/>
+            <Button  Name="Funghi" Content="Funghi 23zł" Foreground="White"  Background="#FFCBB985" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40" Click="Funghi_Click"/>
+            <Button Name="Salami" Content="Salami 23zł" Foreground="White"  Background="#FFC26256" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40" Click="Salami_Click"/>
 
 
 
@@ -26,9 +26,9 @@
               Height="130" 
               Width="750">
 
-            <Button  Name="Capriciosa" Content="Capriciosa" Foreground="White"  Background="#FFB58D40" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
-            <Button  Name="Roma" Content="Roma" Foreground="White"  Background="#FF9B3F3A" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
-            <Button Name="Venezia" Content="Venezia" Foreground="White"  Background="#FF1C151A" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+            <Button  Name="Capriciosa" Content="Capriciosa 24zł" Foreground="White"  Background="#FFB58D40" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40" Click="Capriciosa_Click"/>
+            <Button  Name="Roma" Content="Roma 22zł" Foreground="White"  Background="#FF9B3F3A" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40" Click="Roma_Click"/>
+            <Button Name="Venezia" Content="Venezia 24zł" Foreground="White"  Background="#FF1C151A" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40" Click="Venezia_Click"/>
 
         </Grid>
         <Grid VerticalAlignment="Top" Height="128" Margin="0,216,0,0">
