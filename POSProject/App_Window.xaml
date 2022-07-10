@@ -16,7 +16,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock Height="120" VerticalAlignment="Top" Foreground="White" Background="Orange"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Height="530" VerticalAlignment="Top" Background="#FF6D6D6D" Foreground="#FFFFEEEE" FontFamily="Rubik Light" FontSize="22" Margin="0,120,0,0"/>
+        <ListBox x:Name="lbRecipe" d:ItemsSource="{d:SampleData ItemCount=5}" Height="530" VerticalAlignment="Top" Background="#FF6D6D6D" Foreground="#FFFFEEEE" FontFamily="Rubik Light" FontSize="22" Margin="0,120,0,0"/>
         <ToolBarPanel Grid.Column="1" Height="120" VerticalAlignment="Top">
             <ToolBarPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -30,9 +30,9 @@
                 Foreground="White"
                 FontWeight="Light" FontFamily="Rubik Light" FontSize="24" HorizontalAlignment="Center" Margin="0,2,0,0"
               />
-                <TextBlock x:Name="OrderTaker_Info" Text="Kasjer 333" FontFamily="Fonts/#Rubik" VerticalAlignment="Top" Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center"  Height="29" Margin="202,41,377,0"  />
-                <TextBlock x:Name="Name_Info" Text="Jakub Kołodziej"  FontFamily="Fonts/#Rubik" VerticalAlignment="Bottom" Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center" Height="29" Margin="373,0,206,30"  />
-                <TextBlock x:Name="Number_Info" Text="Kasa nr.4"      FontFamily="Fonts/#Rubik" VerticalAlignment="Top" Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center" Height="40" Margin="205,77,209,0"  />
+                <TextBlock x:Name="tbWorkerInfo" Text="Kasjer 333" FontFamily="Fonts/#Rubik" VerticalAlignment="Top" Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center"  Height="29" Margin="202,41,377,0"  />
+                <TextBlock x:Name="tbName" Text="Jakub Kołodziej"  FontFamily="Fonts/#Rubik" VerticalAlignment="Bottom" Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center" Height="29" Margin="373,0,206,30"  />
+                <TextBlock x:Name="tbCash" Text="Kasa nr.4"   FontFamily="Fonts/#Rubik" VerticalAlignment="Top" Background="Transparent" Foreground="Orange" FontSize="20" TextAlignment="Center" Height="40" Margin="205,77,209,0"  />
                 <Border BorderBrush="Orange" BorderThickness="3" Margin="202,0,206,-10"/>
                 <Border BorderBrush="Orange" BorderThickness="3" Margin="202,30,206,-10"/>
                 <Border BorderBrush="Orange" BorderThickness="3" Margin="202,70,206,-10"/>
@@ -47,7 +47,7 @@
                     <GradientStop Color="#FFFF6262" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <Button x:Name="Pizza_Button" Click="Pizza_Button_Click" Content="Pizza" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
+            <Button x:Name="btPizza" Click="Pizza_Button_Click" Content="Pizza" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -60,7 +60,7 @@
                     <Style/>
                 </Button.Style>
             </Button>
-            <Button x:Name="Trimmings_Button" Click="Trimmings_Button_Click" Content="Dodatki" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btExtras" Click="Trimmings_Button_Click" Content="Dodatki" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -73,7 +73,7 @@
                     <Style/>
                 </Button.Style>
             </Button>
-            <Button x:Name="Multiply_1Button" Content="1" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply1" Content="1" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -83,7 +83,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="Drinks_Button" Click="Drinks_Button_Click" Content="Napoje" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
+            <Button x:Name="btDrinks" Click="Drinks_Button_Click" Content="Napoje" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" Width="220" Height="50" RenderTransformOrigin="0.5,0.5" ClickMode="Press" FontSize="20">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -96,7 +96,7 @@
                     <Style/>
                 </Button.Style>
             </Button>
-            <Button x:Name="Multiply_2Button_Copy" Content="2" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button x:Name="btMultiply2" Content="2" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -106,7 +106,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="Multiply_3Button" Content="3" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply3" Content="3" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -116,7 +116,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="Multiply_4Button" Content="4" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply4" Content="4" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -126,7 +126,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="Multiply_5Button" Content="5" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply5" Content="5" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -136,7 +136,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="Multiply_6Button" Content="6" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
+            <Button x:Name="btMultiply6" Content="6" Width="100" Height="85" FontFamily="Rubik Light" FontWeight="Bold" FontSize="72" RenderTransformOrigin="0.5,0.5" Background="#FF564F4F" Foreground="Orange">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -149,7 +149,7 @@
         </StackPanel>
         <Label Content="Johnny Seafood" FontFamily="Fonts/#Rubik" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="30"/>
 
-        <Frame x:Name="Pages_Screen" Grid.Column="1" Margin="0,290,0,0" NavigationUIVisibility="Hidden" Background="#FFFFA262">
+        <Frame x:Name="Pages_Screen" Grid.Column="1" Margin="0,290,0,0" NavigationUIVisibility="Hidden" Background="#FFFFA262" Source="/Pizza_Page.xaml">
             <!--TO DO
             Fix the main default page-->
         </Frame>
