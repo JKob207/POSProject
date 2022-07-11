@@ -39,6 +39,18 @@ namespace POSProject
                    .WithMany(x => x.customer_Pizzas)
                    .HasForeignKey(x => x.customerOrderID)
                    .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Customer_drink>()
+                   .HasOne(x => x.Drinks)
+                   .WithMany(x => x.customer_Drinks)
+                   .HasForeignKey(x => x.DrinkID)
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Customer_drink>()
+                   .HasOne(x => x.customer_Order)
+                   .WithMany(x => x.customer_Drinks)
+                   .HasForeignKey(x => x.customerOrderID)
+                   .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

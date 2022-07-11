@@ -166,6 +166,13 @@ namespace POSProject
             {
                 dbContext.Customer_Pizza.Add(pizza);
             }
+
+            // Add drinks to database
+            foreach (Customer_drink drink in customer_Drinks_List)
+            {
+                dbContext.Customer_Drinks.Add(drink);
+            }
+
             dbContext.SaveChanges();
         }
     }
