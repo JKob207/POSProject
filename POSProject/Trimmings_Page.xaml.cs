@@ -18,6 +18,15 @@ namespace POSProject
     /// <summary>
     /// Logika interakcji dla klasy Trimmings_Page.xaml
     /// </summary>
+    public enum ExtraEnum
+    {
+        Oliwki = 1,
+        Czosnek,
+        Jalapeno,
+        Rukola,
+        Pesto,
+        Ananas
+    }
     public partial class Trimmings_Page : Page
     {
         public Trimmings_Page()
@@ -29,12 +38,19 @@ namespace POSProject
         {
             if(((App_Window)Window.GetWindow(this)).addExtras == true)
             {
+                // Add extra to list box
                 int extraPrice = price * ((App_Window)Window.GetWindow(this)).Multiply;
                 string extrasOrder = "\t" + extra + " x" + ((App_Window)Window.GetWindow(this)).Multiply.ToString() + " " + extraPrice + "zł";
                 ((App_Window)Window.GetWindow(this)).TotalPrice = ((App_Window)Window.GetWindow(this)).TotalPrice + extraPrice;
                 ((App_Window)Window.GetWindow(this)).tbTotalPrice.Text = "Całkowita cena: " + ((App_Window)Window.GetWindow(this)).TotalPrice + "zł";
                 ((App_Window)Window.GetWindow(this)).addExtras = true;
                 ((App_Window)Window.GetWindow(this)).lbBill.Items.Add(extrasOrder);
+
+                // Add extra to list
+                int pizzaID = ((App_Window)Window.GetWindow(this)).customer_Pizzas_List.Count();
+                ExtraEnum Extraid = (ExtraEnum)System.Enum.Parse(typeof(ExtraEnum), extra);
+                ((App_Window)Window.GetWindow(this)).customer_Extras_List.Add(new() { Quantity = ((App_Window)Window.GetWindow(this)).Multiply, ExtraID = (int)Extraid, customerPizzaID = pizzaID });
+
             }
         }
 
