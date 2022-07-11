@@ -50,7 +50,6 @@ namespace POSProject
                 int pizzaID = ((App_Window)Window.GetWindow(this)).customer_Pizzas_List.Count();
                 ExtraEnum Extraid = (ExtraEnum)System.Enum.Parse(typeof(ExtraEnum), extra);
                 ((App_Window)Window.GetWindow(this)).customer_Extras_List.Add(new() { Quantity = ((App_Window)Window.GetWindow(this)).Multiply, ExtraID = (int)Extraid, customerPizzaID = pizzaID });
-
             }
         }
 

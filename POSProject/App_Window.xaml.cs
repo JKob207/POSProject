@@ -183,6 +183,25 @@ namespace POSProject
             }
 
             dbContext.SaveChanges();
+
+            // Clear list box
+            lbBill.Items.Clear();
+            tbTotalPrice.Text = "Całkowita cena: 0zł";
+
+            // Flush lists
+            customer_Pizzas_List.Clear();
+            customer_Extras_List.Clear();
+            customer_Drinks_List.Clear();
+
+            //Update customer order total price
+            var order = dbContext.Customer_Orders.SingleOrDefault(c => c.ID == CustomerOrderNumber);
+            if (order != null)
+            {
+                order.Total_price = TotalPrice;
+                TotalPrice = 0;
+                CustomerOrderNumber++;
+                dbContext.SaveChanges();
+            }
         }
     }
 
