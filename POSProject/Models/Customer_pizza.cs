@@ -16,7 +16,7 @@ namespace POSProject
         public int PizzaID { get; set; }
         public Pizza Pizza { get; set; }
         public int customerOrderID { get; set; }
-        public Customer_order customer_Order { get; set; }
+        public Customer_order Customer_order { get; set; }
 
         public List<Customer_extra> customer_Extras { get; set;}
     }

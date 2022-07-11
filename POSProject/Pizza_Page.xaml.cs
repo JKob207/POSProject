@@ -18,6 +18,17 @@ namespace POSProject.Pages
     /// <summary>
     /// Logika interakcji dla klasy Pizza_Page.xaml
     /// </summary>
+    
+    public enum PizzaEnum
+    {
+        Margherita = 1,
+        Funghi,
+        Salami,
+        Capriciosa,
+        Roma,
+        Venezia
+    }
+
     public partial class Pizza_Page : Page
     {
         public Pizza_Page()
@@ -27,12 +38,18 @@ namespace POSProject.Pages
 
         private void addPizza(string pizza, int price)
         {
+            // Add pizza to list box
             int pizzaPrice = price * ((App_Window)Window.GetWindow(this)).Multiply;
             string pizzaOrder = pizza + " x" + ((App_Window)Window.GetWindow(this)).Multiply.ToString() + "\t " + pizzaPrice+"zł";
             ((App_Window)Window.GetWindow(this)).TotalPrice = ((App_Window)Window.GetWindow(this)).TotalPrice + pizzaPrice;
             ((App_Window)Window.GetWindow(this)).tbTotalPrice.Text = "Całkowita cena: " + ((App_Window)Window.GetWindow(this)).TotalPrice+"zł";
             ((App_Window)Window.GetWindow(this)).addExtras = true;
             ((App_Window)Window.GetWindow(this)).lbBill.Items.Add(pizzaOrder);
+
+            // Add pizza to list
+            int customerOrder = ((App_Window)Window.GetWindow(this)).CustomerOrderNumber;
+            PizzaEnum Pizzaid = (PizzaEnum)System.Enum.Parse(typeof(PizzaEnum), pizza);
+            ((App_Window)Window.GetWindow(this)).customer_Pizzas_List.Add(new() { Quantity = ((App_Window)Window.GetWindow(this)).Multiply, PizzaID = (int)Pizzaid, customerOrderID = customerOrder });
         }
 
         private void Margherita_Click(object sender, RoutedEventArgs e)

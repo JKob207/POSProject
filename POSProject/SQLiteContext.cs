@@ -23,5 +23,22 @@ namespace POSProject
             options.UseSqlite(@"Data Source = db.sqlite");
             base.OnConfiguring(options);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Customer_pizza>()
+                    .HasOne(x => x.Pizza)
+                    .WithMany(x => x.Pizzas)
+                    .HasForeignKey(x => x.PizzaID)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Customer_pizza>()
+                   .HasOne(x => x.Customer_order)
+                   .WithMany(x => x.customer_Pizzas)
+                   .HasForeignKey(x => x.customerOrderID)
+                   .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }

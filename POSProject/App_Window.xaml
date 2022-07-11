@@ -10,7 +10,7 @@
         ResizeMode="NoResize"              
         Title="App_Window" Height="650" Width="1000"
         >
-    <Grid Background="#FFFFA262">
+    <Grid Background="#FFFFA262" Margin="0,0,0,-29">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition/>
@@ -151,8 +151,9 @@
 
         <Frame x:Name="Pages_Screen" Grid.Column="1" Margin="0,290,0,0" NavigationUIVisibility="Hidden" Background="#FFFFA262" Source="/Pizza_Page.xaml">
         </Frame>
-        <Button x:Name="btNewOrder" Content="Nowe zamówienie" HorizontalAlignment="Left" Height="56" Margin="6,568,0,0" VerticalAlignment="Top" Width="234" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" FontSize="20" Click="btNewOrder_Click"/>
-        <TextBlock x:Name="tbTotalPrice" HorizontalAlignment="Left" Height="34" Margin="15,529,0,0" Text="Całkowita cena: 0zł" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" TextAlignment="Center" FontFamily="Rubik Light" FontSize="24"/>
+        <Button x:Name="btNewOrder" Content="Nowe zamówienie" HorizontalAlignment="Left" Height="45" Margin="6,559,0,0" VerticalAlignment="Top" Width="234" Background="#FF888775" Foreground="White" FontFamily="Rubik Light" FontSize="20" Click="btNewOrder_Click"/>
+        <TextBlock x:Name="tbTotalPrice" HorizontalAlignment="Center" Height="34" Margin="0,525,0,0" Text="Całkowita cena: 0zł" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" TextAlignment="Center" FontFamily="Rubik Light" FontSize="24"/>
+        <Button x:Name="btConfirm" Content="Zatwierdź" Grid.Column="1"  HorizontalAlignment="Center" Height="50" Margin="0,535,0,0" VerticalAlignment="Top" FontFamily="Fonts/#Rubik" Width="400" Background="#FF333333" Foreground="Orange" FontWeight="Medium" FontSize="24" Click="btConfirm_Click"/>
 
 
 

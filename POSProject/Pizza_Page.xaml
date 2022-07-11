@@ -31,9 +31,6 @@
             <Button Name="Venezia" Content="Venezia 24zł" Foreground="White"  Background="#FF1C151A" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40" Click="Venezia_Click"/>
 
         </Grid>
-        <Grid VerticalAlignment="Top" Height="128" Margin="0,216,0,0">
-            <Button Name="Confirm" Content="Zatwierdź" Foreground="Orange" FontWeight="Medium"  Background="#333" BorderBrush="Yellow" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="400" />
 
-        </Grid>
     </Grid>
 </Page>

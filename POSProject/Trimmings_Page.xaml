@@ -32,11 +32,6 @@
 
         </Grid>
 
-        <Grid VerticalAlignment="Top" Height="128" Margin="0,216,0,0">
-            <Button Name="Confirm" Content="Zatwierdź" Foreground="Orange" FontWeight="Medium"  Background="#333" BorderBrush="Yellow" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="400" />
-
-        </Grid>
-
 
     </Grid>
 </Page>
