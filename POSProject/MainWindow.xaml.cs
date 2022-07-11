@@ -37,35 +37,54 @@ namespace POSProject
         {
             if(db.Pizza.Count() == 0)
             {
-                //Pizzas
-                db.Pizza.Add(new() { Name = "Margherita", Price = 29 });
-                db.Pizza.Add(new() { Name = "Funghi", Price = 30 });
-                db.Pizza.Add(new() { Name = "Salami", Price = 32 });
-                db.Pizza.Add(new() { Name = "Capricciosa", Price = 32 });
-                db.Pizza.Add(new() { Name = "Hawajska", Price = 32 });
-                db.Pizza.Add(new() { Name = "Quarttro", Price = 34 });
+                // Pizzas
+                db.Pizza.Add(new() { Name = "Margherita", Price = 20 });
+                db.SaveChanges();
+                db.Pizza.Add(new() { Name = "Funghi", Price = 23 });
+                db.SaveChanges();
+                db.Pizza.Add(new() { Name = "Salami", Price = 23 });
+                db.SaveChanges();
+                db.Pizza.Add(new() { Name = "Capriciosa", Price = 24 });
+                db.SaveChanges();
+                db.Pizza.Add(new() { Name = "Roma", Price = 22 });
+                db.SaveChanges();
+                db.Pizza.Add(new() { Name = "Venezia", Price = 24 });
+                db.SaveChanges();
             }
 
             if (db.Extra.Count() == 0)
             {
-                //Extras
-                db.Extra.Add(new() { Name = "Chicken", Price = 5 });
-                db.Extra.Add(new() { Name = "Cheesee", Price = 2 });
-                db.Extra.Add(new() { Name = "Mushrooms", Price = 2 });
-                db.Extra.Add(new() { Name = "Spinaci", Price = 3 });
-                db.Extra.Add(new() { Name = "Salami", Price = 4 });
+                // Extras
+                db.Extra.Add(new() { Name = "Oliwki", Price = 2 });
+                db.SaveChanges();
+                db.Extra.Add(new() { Name = "Czosnek", Price = 3 });
+                db.SaveChanges();
+                db.Extra.Add(new() { Name = "Jalapeno", Price = 3 });
+                db.SaveChanges();
+                db.Extra.Add(new() { Name = "Rukola", Price = 2 });
+                db.SaveChanges();
+                db.Extra.Add(new() { Name = "Pesto", Price = 3 });
+                db.SaveChanges();
+                db.Extra.Add(new() { Name = "Ananas", Price = 5 });
+                db.SaveChanges();
             }
 
             if (db.Drink.Count() == 0)
             {
                 //Drinks
-                db.Drink.Add(new() { Name = "CocaCola", Price = 7 });
-                db.Drink.Add(new() { Name = "Fanta", Price = 7 });
+                db.Drink.Add(new() { Name = "Coca-Cola", Price = 6 });
+                db.SaveChanges();
                 db.Drink.Add(new() { Name = "Sprite", Price = 7 });
-                db.Drink.Add(new() { Name = "Water", Price = 5 });
+                db.SaveChanges();
+                db.Drink.Add(new() { Name = "Fanta", Price = 6 });
+                db.SaveChanges();
+                db.Drink.Add(new() { Name = "Coca-Cola ZERO", Price = 6 });
+                db.SaveChanges();
+                db.Drink.Add(new() { Name = "Woda gazowana", Price = 5 });
+                db.SaveChanges();
+                db.Drink.Add(new() { Name = "Woda niegazowana", Price = 5 });
+                db.SaveChanges();
             }
-
-            db.SaveChanges();
         }
 
 

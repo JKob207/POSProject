@@ -55,7 +55,7 @@ namespace POSProject
                 tbUserIdLogin.Text = "Błędne ID!";
             }else
             {
-                App_Window main = new App_Window();
+                App_Window main = new App_Window(result.EmployeerID, result.Name, result.Surname, result.EmployeerRole);
                 main.Show();
                 this.Close();
             }

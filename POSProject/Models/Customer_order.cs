@@ -14,7 +14,7 @@ namespace POSProject
         public int ID { get; set; }
         public int Total_price { get; set; }
 
-        List<Customer_pizza> customer_Pizzas { get; set; }
-        List<Customer_drink> customer_Drinks { get; set; }
+        public List<Customer_pizza> customer_Pizzas { get; set; }
+        public List<Customer_drink> customer_Drinks { get; set; }
     }
 }

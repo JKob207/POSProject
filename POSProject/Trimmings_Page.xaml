@@ -13,9 +13,9 @@
               VerticalAlignment="Top"
               Height="130" 
               Width="750">
-            <Button  Name="Olives" Content="Oliwki" Foreground="White"  Background="#FFC5C441" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
-            <Button  Name="Garlic" Content="Czosnek w oliwie" Foreground="White"  Background="#FFD6C19E" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
-            <Button Name="Jalapeno" Content="Jalapeño" Foreground="White"  Background="#FF98AE0D" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
+            <Button Name="Olives" Content="Oliwki 2zł" Foreground="White"  Background="#FFC5C441" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40" Click="Olives_Click"/>
+            <Button  Name="Garlic" Content="Czosnek w oliwie 3zł" Foreground="White"  Background="#FFD6C19E" FontFamily="Fonts/#Rubik" FontSize="20" Height="50" Width="200" Margin="275,40,275,40" Click="Garlic_Click"/>
+            <Button Name="Jalapeno" Content="Jalapeño 3zł" Foreground="White"  Background="#FF98AE0D" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40" Click="Jalapeno_Click"/>
 
 
 
@@ -26,14 +26,9 @@
               Height="130" 
               Width="750">
 
-            <Button  Name="Rocket" Content="Rukola" Foreground="White"  Background="#FF11A30B" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40"/>
-            <Button  Name="Pesto" Content="Pesto" Foreground="White"  Background="#FF74A632" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40"/>
-            <Button Name="Pineapple" Content="Ananas" Foreground="White"  Background="#FFD18539" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40"/>
-
-        </Grid>
-
-        <Grid VerticalAlignment="Top" Height="128" Margin="0,216,0,0">
-            <Button Name="Confirm" Content="Zatwierdź" Foreground="Orange" FontWeight="Medium"  Background="#333" BorderBrush="Yellow" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="400" />
+            <Button  Name="Rocket" Content="Rukola 2zł" Foreground="White"  Background="#FF11A30B" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="25,40,525,40" Click="Rocket_Click"/>
+            <Button  Name="Pesto" Content="Pesto 3zł" Foreground="White"  Background="#FF74A632" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="275,40,275,40" Click="Pesto_Click"/>
+            <Button Name="Pineapple" Content="Ananas 5zł" Foreground="White"  Background="#FFD18539" FontFamily="Fonts/#Rubik" FontSize="24" Height="50" Width="200" Margin="525,40,25,40" Click="Pineapple_Click"/>
 
         </Grid>
 

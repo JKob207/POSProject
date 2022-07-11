@@ -15,6 +15,6 @@ namespace POSProject
         public string Name { get; set; }
         public int Price { get; set; }
 
-        List<Customer_extra> customer_Extras { get; set; }
+        public List<Customer_extra> customer_Extras { get; set; }
     }
 }
