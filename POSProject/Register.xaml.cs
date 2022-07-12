@@ -23,6 +23,7 @@ namespace POSProject
         public Register()
         {
             InitializeComponent();
+            tbSuccess.Visibility = Visibility.Hidden;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -34,8 +35,10 @@ namespace POSProject
 
         private void btCreateAccount_Click(object sender, RoutedEventArgs e)
         {
-            //Download data from text boxes
+            using var dbContext = new SQLiteContext();
+            dbContext.Database.EnsureCreated();
 
+            //Download data from text boxes
             string userIdString = tbIdPracownik.Text;
             string userFirstNameString = tbFirstName.Text;
             string userSecondNameString = tbSecondName.Text;
@@ -53,15 +56,31 @@ namespace POSProject
             tbAge.Text = "";
 
             //Validate Users inputs
-
-
             bool checkIfNumberId = int.TryParse(userIdString, out userIdInt);
             bool checkIfNumberAge = int.TryParse(userAgeString, out userAgeInt);
+            bool checkIdLength = userIdString.Length == 4 ? true : false; 
+
+            //Check if ID is free
+            var checkFreeID = dbContext.Employee.Where(e => e.EmployeerID == userIdInt).FirstOrDefault();
 
             if (checkIfNumberId != true)
             {
                 tbError.Visibility = Visibility.Visible;
                 tbError.Text = "Wpisz poprawne ID!";
+                return;
+            }
+
+            if (checkFreeID != null)
+            {
+                tbError.Visibility = Visibility.Visible;
+                tbError.Text = "Podane ID jest zajęte!";
+                return;
+            }
+
+            if (checkIdLength != true)
+            {
+                tbError.Visibility = Visibility.Visible;
+                tbError.Text = "Podane ID jest niezgodnej długości!";
                 return;
             }
 
@@ -87,10 +106,9 @@ namespace POSProject
             }
 
             //Parse data to database
-            using var dbContext = new SQLiteContext();
-            dbContext.Database.EnsureCreated();
             dbContext.Employee.Add(new() { EmployeerID = userIdInt, Name = userFirstNameString, Surname = userSecondNameString, Age = userAgeInt, EmployeerRole = userPosition });
             dbContext.SaveChanges();
+            tbSuccess.Visibility = Visibility.Visible;
         }
     }
 }

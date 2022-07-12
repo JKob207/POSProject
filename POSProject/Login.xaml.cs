@@ -55,9 +55,16 @@ namespace POSProject
                 tbUserIdLogin.Text = "Błędne ID!";
             }else
             {
-                App_Window main = new App_Window(result.EmployeerID, result.Name, result.Surname, result.EmployeerRole);
-                main.Show();
-                this.Close();
+                UserLogin tUser = new UserLogin();
+
+                bool testID = tUser.Login(userId, result.EmployeerID);
+
+                if(testID)
+                {
+                    App_Window main = new App_Window(result.EmployeerID, result.Name, result.Surname, result.EmployeerRole);
+                    main.Show();
+                    this.Close();
+                }
             }
         }
     }
