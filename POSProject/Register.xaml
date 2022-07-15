@@ -8,7 +8,7 @@
         Title="Zarejestruj się"
         Height="720" Width="900"
         WindowStyle="SingleBorderWindow"
-        ResizeMode="CanResizeWithGrip"
+        ResizeMode="NoResize"
         Background="#444"
         FontFamily="Fonts/#Rubik">
     <Grid>
@@ -24,12 +24,12 @@
         <!--Second Column-->
 
 
-        <TextBlock Text="Wprowadź swój identyfikator" 
+        <TextBlock Text="Wprowadź swój identyfikator (4 cyfry)" 
                    Margin="462,191,0,0" 
                    Background="Transparent" 
                    Foreground="#FFF37E15" 
                    FontSize="11" 
-                   TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                   TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Width="228"/>
 
         <TextBox x:Name="tbFirstName" FontFamily="Fonts/Rubik"
                  FontWeight="Light"
@@ -68,8 +68,6 @@
                  HorizontalContentAlignment="Left"
                  Opacity="0.7"
                  Margin="462,-30,0,0" Height="30"/>
-        <!--TO DO: FIND Solve how to make input type number and list-->
-
         <Button Name="Back"
                 Click="Back_Click"
             Foreground="White"
@@ -170,6 +168,7 @@
                  Opacity="0.7"
                  Height="25"
             Margin="462,-245,0,0" MinHeight="25" HorizontalScrollBarVisibility="Hidden" FlowDirection="LeftToRight"/>
+        <TextBlock x:Name="tbSuccess" Text="Konto pomyślnie utworzone!" TextWrapping="Wrap" Margin="628,500,0,0" Foreground="#FF7EFF40" FontSize="14" TextAlignment="Center" HorizontalAlignment="Left" Width="195" Height="22" VerticalAlignment="Top" Visibility="Hidden"/>
 
 
 
