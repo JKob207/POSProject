@@ -26,6 +26,9 @@ namespace POSProject
             tbSuccess.Visibility = Visibility.Hidden;
         }
 
+        /// <summary>
+        /// Przycisk powrotu do głównego okna aplikacji
+        /// </summary>
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             MainWindow home = new MainWindow();
@@ -33,6 +36,9 @@ namespace POSProject
             this.Close();
         }
 
+        /// <summary>
+        /// Przycisk umożliwiowający stworzenie nowego konta
+        /// </summary>
         private void btCreateAccount_Click(object sender, RoutedEventArgs e)
         {
             using var dbContext = new SQLiteContext();

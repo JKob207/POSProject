@@ -32,7 +32,10 @@ namespace POSProject
             dbContext.Database.EnsureCreated();
             InitializeTablesValue(dbContext);
         }
-
+        /// <summary>
+        /// Funkcja inicjalizująca tabele i wartości w nich
+        /// </summary>
+        /// <param name="db">Podowany jest odnośnik do bazy danych</param>
         private void InitializeTablesValue(SQLiteContext db)
         {
             if(db.Pizza.Count() == 0)
@@ -89,6 +92,9 @@ namespace POSProject
 
 
         //Movement of Window
+        /// <summary>
+        /// Przesuwanie okienka
+        /// </summary>
         private void Grid_MouseDown(object sender , MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -96,14 +102,18 @@ namespace POSProject
                 DragMove();
             }
         }
-
+        /// <summary>
+        /// Przycisk przejścia do okna logowania
+        /// </summary>
         private void Login1_Click(object sender, RoutedEventArgs e)
         {
             Login login = new Login();
             login.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// Przycisk przejścia do okna rejestracji
+        /// </summary>
         private void btRegistration_Click(object sender, RoutedEventArgs e)
         {
             Register register = new Register();
