@@ -63,17 +63,25 @@ namespace POSProject
 
 
         //Buttons whose open pages
+        /// <summary>
+        /// Przycisk wyzwalający stronę z pizzami
+        /// </summary>
         private void btPizza_Click(object sender, RoutedEventArgs e)
         {
             Pages_Screen.Content = new Pizza_Page();
             btExtras.IsEnabled = true;
 
         }
+        /// <summary>
+        /// Przycisk wyzwalający stronę z dodatkami
+        /// </summary>
         private void btExtras_Click(object sender, RoutedEventArgs e)
         {
             Pages_Screen.Content = new Trimmings_Page();
         }
-
+        /// <summary>
+        /// Przycisk wyzwalający strony z napojami
+        /// </summary>
         private void btDrinks_Click(object sender, RoutedEventArgs e)
         {
             Pages_Screen.Content = new Drinks_Page();
@@ -91,48 +99,63 @@ namespace POSProject
         }
 
         // Multiply buttons
+        /// <summary>
+        /// Przycisk mnożnika razy 1
+        /// </summary>
         private void btMultiply1_Click(object sender, RoutedEventArgs e)
         {
             Multiply = 1;
             ResetMultipleButtonsBc();
             btMultiply1.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
         }
-
+        /// <summary>
+        /// Przycisk mnożnika razy 2
+        /// </summary>
         private void btMultiply2_Click(object sender, RoutedEventArgs e)
         {
             Multiply = 2;
             ResetMultipleButtonsBc();
             btMultiply2.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
         }
-
+        /// <summary>
+        /// Przycisk mnożnika razy 3
+        /// </summary>
         private void btMultiply3_Click(object sender, RoutedEventArgs e)
         {
             Multiply = 3;
             ResetMultipleButtonsBc();
             btMultiply3.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
         }
-
+        /// <summary>
+        /// Przycisk mnożnika razy 4
+        /// </summary>
         private void btMultiply4_Click(object sender, RoutedEventArgs e)
         {
             Multiply = 4;
             ResetMultipleButtonsBc();
             btMultiply4.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
         }
-
+        /// <summary>
+        /// Przycisk mnożnika razy 5
+        /// </summary>
         private void btMultiply5_Click(object sender, RoutedEventArgs e)
         {
             Multiply = 5;
             ResetMultipleButtonsBc();
             btMultiply5.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
         }
-
+        /// <summary>
+        /// Przycisk mnożnika razy 6
+        /// </summary>
         private void btMultiply6_Click(object sender, RoutedEventArgs e)
         {
             Multiply = 6;
             ResetMultipleButtonsBc();
             btMultiply6.Background = (Brush)new BrushConverter().ConvertFrom("#BEE6FD");
         }
-
+        /// <summary>
+        /// Przycisk usunięcia bieżącego zamówienia i stworzenia nowego
+        /// </summary>
         private void btNewOrder_Click(object sender, RoutedEventArgs e)
         {
             lbBill.Items.Clear();
@@ -156,6 +179,9 @@ namespace POSProject
             dbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Przycisk potwierdzenie zamówienia, który tworzey nowe zamówienie i umieszcza je w bazie dancyh
+        /// </summary>
         private void btConfirm_Click(object sender, RoutedEventArgs e)
         {
             using var dbContext = new SQLiteContext();

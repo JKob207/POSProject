@@ -23,7 +23,10 @@ namespace POSProject
         {
             InitializeComponent();
         }
-
+        
+        /// <summary>
+        /// Przycisk powrotu do głównego okna aplikacji
+        /// </summary>
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             MainWindow home = new MainWindow();
@@ -31,7 +34,9 @@ namespace POSProject
             this.Close();
         }
 
-        
+        /// <summary>
+        /// Przycisk logowania użytkownika do panelu
+        /// </summary>
         private void Run_Button_Click(object sender, RoutedEventArgs e)
         {
             // Downloaded data from user input
